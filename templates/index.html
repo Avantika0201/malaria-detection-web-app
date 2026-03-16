@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>MalariaScope AI</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h2>🧬 MalariaScope</h2>
+<span class="status">System Online</span>
+
+</div>
+
+<div class="hero">
+
+<h1>Revolutionary AI-Powered <br> Malaria Detection</h1>
+
+<p>Clinical-grade accuracy • Real-time analysis • Instant results</p>
+
+</div>
+
+<div class="upload-container">
+
+<h2>Upload Blood Cell Image</h2>
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+
+<input type="file" name="file" required>
+
+<br><br>
+
+<button class="btn">Analyze Sample</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

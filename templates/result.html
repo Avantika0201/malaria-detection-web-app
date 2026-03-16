@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Diagnostic Report</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<h1 class="report-title">Diagnostic Report</h1>
+
+
+<div class="result-box {% if result == 'PARASITIZED' %}infected{% else %}healthy{% endif %}">
+
+<img src="{{ img_path }}" width="200">
+
+<h2>{{ result }}</h2>
+
+{% if result == "PARASITIZED" %}
+
+<p>Malaria parasites detected</p>
+
+{% else %}
+
+<p>No malaria parasites detected</p>
+
+{% endif %}
+
+</div>
+
+
+<div class="confidence">
+
+<h3>Confidence Level</h3>
+
+<div class="bar">
+
+<div class="fill" style="width: {{ confidence }}%"></div>
+
+</div>
+
+<p>{{ confidence }} %</p>
+
+</div>
+
+
+<div class="details">
+
+<h3>Analysis Details</h3>
+
+<p>Model : CNN</p>
+
+<p>Processing Time : {{ time }} seconds</p>
+
+<p>Image Quality : Excellent</p>
+
+</div>
+
+<br>
+
+<a href="/" class="btn">Analyze Another Image</a>
+
+</body>
+
+</html>
