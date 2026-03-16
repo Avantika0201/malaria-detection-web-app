@@ -1,0 +1,7 @@
+dataset/
+cell_images/
+*.zip
+*.png
+*.jpg
+__pycache__/
+venv/
